@@ -1,0 +1,37 @@
+{
+  "id": "dracula",
+  "name": "Dracula",
+  "type": "dark",
+  "meta": {
+    "version": "1.0.0",
+    "author": "Dracula Theme",
+    "authorEmail": "hello@draculatheme.com",
+    "description": "A dark theme for the creatures of the night."
+  },
+  "colors": {
+    "bg": "#282A36",
+    "bgElevated": "#21222C",
+    "bgOverlay": "#343746",
+    "surfaceHover": "#3A3C4E",
+    "border": "#191A21",
+    "borderStrong": "#44475A",
+    "textStrong": "#F8F8F2",
+    "text": "#F8F8F2",
+    "textMuted": "#6272A4",
+    "accent": "#BD93F9",
+    "accentHover": "#CBA6FA",
+    "accentFg": "#282A36",
+    "added": "#50FA7B",
+    "removed": "#FF5555",
+    "modified": "#8BE9FD"
+  },
+  "typography": {
+    "uiFont": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif",
+    "uiFontSize": 13,
+    "monoFont": "'IBM Plex Mono', 'SF Mono', Consolas, monospace",
+    "editorFont": "'IBM Plex Mono', 'SF Mono', Consolas, 'Courier New', monospace",
+    "editorFontSize": 13,
+    "editorLineHeight": 0,
+    "radius": 6
+  }
+}

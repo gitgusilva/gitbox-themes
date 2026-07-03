@@ -1,0 +1,36 @@
+{
+  "id": "nord",
+  "name": "Nord",
+  "type": "dark",
+  "meta": {
+    "version": "1.0.0",
+    "author": "Arctic Ice Studio",
+    "description": "An arctic, north-bluish color palette."
+  },
+  "colors": {
+    "bg": "#2E3440",
+    "bgElevated": "#3B4252",
+    "bgOverlay": "#434C5E",
+    "surfaceHover": "#4C566A",
+    "border": "#3B4252",
+    "borderStrong": "#4C566A",
+    "textStrong": "#ECEFF4",
+    "text": "#D8DEE9",
+    "textMuted": "#7B88A1",
+    "accent": "#88C0D0",
+    "accentHover": "#8FBCBB",
+    "accentFg": "#2E3440",
+    "added": "#A3BE8C",
+    "removed": "#BF616A",
+    "modified": "#81A1C1"
+  },
+  "typography": {
+    "uiFont": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif",
+    "uiFontSize": 13,
+    "monoFont": "'IBM Plex Mono', 'SF Mono', Consolas, monospace",
+    "editorFont": "'IBM Plex Mono', 'SF Mono', Consolas, 'Courier New', monospace",
+    "editorFontSize": 13,
+    "editorLineHeight": 0,
+    "radius": 6
+  }
+}

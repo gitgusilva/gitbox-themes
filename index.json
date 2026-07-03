@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "name": "GitBox Themes",
+  "themes": [
+    {
+      "id": "gitbox-dark",
+      "name": "GitBox Dark",
+      "type": "dark",
+      "author": "GitBox",
+      "version": "1.0.0",
+      "description": "Default dark theme.",
+      "path": "themes/gitbox-dark/theme.json",
+      "preview": "themes/gitbox-dark/preview@2x.png"
+    },
+    {
+      "id": "gitbox-light",
+      "name": "GitBox Light",
+      "type": "light",
+      "author": "GitBox",
+      "version": "1.0.0",
+      "description": "Default light theme.",
+      "path": "themes/gitbox-light/theme.json",
+      "preview": "themes/gitbox-light/preview@2x.png"
+    },
+    {
+      "id": "dracula",
+      "name": "Dracula",
+      "type": "dark",
+      "author": "Dracula Theme",
+      "version": "1.0.0",
+      "description": "A dark theme for the creatures of the night.",
+      "path": "themes/dracula/theme.json",
+      "preview": "themes/dracula/preview@2x.png"
+    },
+    {
+      "id": "one-dark-pro",
+      "name": "One Dark Pro",
+      "type": "dark",
+      "author": "binaryify",
+      "version": "1.0.0",
+      "description": "Atom's iconic One Dark, refined.",
+      "path": "themes/one-dark-pro/theme.json",
+      "preview": "themes/one-dark-pro/preview@2x.png"
+    },
+    {
+      "id": "nord",
+      "name": "Nord",
+      "type": "dark",
+      "author": "Arctic Ice Studio",
+      "version": "1.0.0",
+      "description": "An arctic, north-bluish color palette.",
+      "path": "themes/nord/theme.json",
+      "preview": "themes/nord/preview@2x.png"
+    },
+    {
+      "id": "monokai",
+      "name": "Monokai",
+      "type": "dark",
+      "author": "Wimer Hazenberg",
+      "version": "1.0.0",
+      "description": "The classic Monokai palette.",
+      "path": "themes/monokai/theme.json",
+      "preview": "themes/monokai/preview@2x.png"
+    },
+    {
+      "id": "solarized-light",
+      "name": "Solarized Light",
+      "type": "light",
+      "author": "Ethan Schoonover",
+      "version": "1.0.0",
+      "description": "Precision colors for machines and people.",
+      "path": "themes/solarized-light/theme.json",
+      "preview": "themes/solarized-light/preview@2x.png"
+    },
+    {
+      "id": "github-light",
+      "name": "GitHub Light",
+      "type": "light",
+      "author": "GitHub",
+      "version": "1.0.0",
+      "description": "GitHub's default light theme.",
+      "path": "themes/github-light/theme.json",
+      "preview": "themes/github-light/preview@2x.png"
+    }
+  ]
+}

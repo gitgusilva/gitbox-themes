@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/gitgusilva/gitbox-themes/schema/theme.schema.json",
+  "title": "GitBox Theme",
+  "description": "A GitBox theme: semantic color tokens plus typography and metadata.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "type", "colors", "typography"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Globally unique, stable identifier (slug or UUID).",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "minLength": 2,
+      "maxLength": 64
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 60
+    },
+    "type": {
+      "type": "string",
+      "enum": ["light", "dark"]
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version"],
+      "properties": {
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "author": { "type": "string", "maxLength": 80 },
+        "authorEmail": { "type": "string", "format": "email" },
+        "description": { "type": "string", "maxLength": 200 }
+      }
+    },
+    "colors": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bg", "bgElevated", "bgOverlay", "surfaceHover",
+        "border", "borderStrong",
+        "textStrong", "text", "textMuted",
+        "accent", "accentHover", "accentFg",
+        "added", "removed", "modified"
+      ],
+      "patternProperties": {
+        "^(bg|bgElevated|bgOverlay|surfaceHover|border|borderStrong|textStrong|text|textMuted|accent|accentHover|accentFg|added|removed|modified)$": {
+          "type": "string",
+          "description": "Solid color in #RRGGBB form (no alpha).",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        }
+      }
+    },
+    "typography": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["uiFont", "uiFontSize", "monoFont", "editorFont", "editorFontSize", "editorLineHeight", "radius"],
+      "properties": {
+        "uiFont": { "type": "string" },
+        "uiFontSize": { "type": "integer", "minimum": 10, "maximum": 20 },
+        "monoFont": { "type": "string" },
+        "editorFont": { "type": "string" },
+        "editorFontSize": { "type": "integer", "minimum": 9, "maximum": 24 },
+        "editorLineHeight": { "type": "integer", "minimum": 0, "maximum": 40 },
+        "radius": { "type": "integer", "minimum": 0, "maximum": 20 }
+      }
+    }
+  }
+}

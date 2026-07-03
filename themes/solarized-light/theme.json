@@ -1,0 +1,36 @@
+{
+  "id": "solarized-light",
+  "name": "Solarized Light",
+  "type": "light",
+  "meta": {
+    "version": "1.0.0",
+    "author": "Ethan Schoonover",
+    "description": "Precision colors for machines and people."
+  },
+  "colors": {
+    "bg": "#FDF6E3",
+    "bgElevated": "#EEE8D5",
+    "bgOverlay": "#FDF6E3",
+    "surfaceHover": "#E7E0CC",
+    "border": "#EEE8D5",
+    "borderStrong": "#D8D0B8",
+    "textStrong": "#073642",
+    "text": "#657B83",
+    "textMuted": "#93A1A1",
+    "accent": "#268BD2",
+    "accentHover": "#3A9BE0",
+    "accentFg": "#FDF6E3",
+    "added": "#859900",
+    "removed": "#DC322F",
+    "modified": "#268BD2"
+  },
+  "typography": {
+    "uiFont": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif",
+    "uiFontSize": 13,
+    "monoFont": "'IBM Plex Mono', 'SF Mono', Consolas, monospace",
+    "editorFont": "'IBM Plex Mono', 'SF Mono', Consolas, 'Courier New', monospace",
+    "editorFontSize": 13,
+    "editorLineHeight": 0,
+    "radius": 6
+  }
+}

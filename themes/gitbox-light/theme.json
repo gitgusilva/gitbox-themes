@@ -1,0 +1,36 @@
+{
+  "id": "gitbox-light",
+  "name": "GitBox Light",
+  "type": "light",
+  "meta": {
+    "version": "1.0.0",
+    "author": "GitBox",
+    "description": "Default light theme."
+  },
+  "colors": {
+    "bg": "#FFFFFF",
+    "bgElevated": "#F5F5F5",
+    "bgOverlay": "#FFFFFF",
+    "surfaceHover": "#ECECEC",
+    "border": "#E5E7EB",
+    "borderStrong": "#D4D4D8",
+    "textStrong": "#111827",
+    "text": "#374151",
+    "textMuted": "#6B7280",
+    "accent": "#2563EB",
+    "accentHover": "#3B82F6",
+    "accentFg": "#FFFFFF",
+    "added": "#16A34A",
+    "removed": "#DC2626",
+    "modified": "#2563EB"
+  },
+  "typography": {
+    "uiFont": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif",
+    "uiFontSize": 13,
+    "monoFont": "'IBM Plex Mono', 'SF Mono', Consolas, monospace",
+    "editorFont": "'IBM Plex Mono', 'SF Mono', Consolas, 'Courier New', monospace",
+    "editorFontSize": 13,
+    "editorLineHeight": 0,
+    "radius": 6
+  }
+}
