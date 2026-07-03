@@ -33,11 +33,11 @@ A submission is accepted only when all of the following hold:
    Do not hand-edit it; it is derived from the palette so previews stay consistent.
 8. **README.** `README.md` includes the theme name, the `preview@2x.png` image, and a
    short description. Copy the structure of an existing theme's README.
-9. **Index.** Add the matching entry to `index.json`, with `path` and `preview`, in the
-   same order the folder is added. The validator checks that `themes/` and `index.json`
-   stay in sync.
-10. **Validation passes.** Run `node scripts/validate.mjs` locally; it must report no
-    errors. CI runs the same check.
+9. **Validation passes.** Run `node scripts/validate.mjs` locally; it must report no
+   errors. CI runs the same check.
+
+There is no index file to edit. The registry is folder-driven: the app discovers
+themes by listing the `themes/` directory, so adding a folder is all it takes.
 
 ## Naming conventions
 
@@ -72,16 +72,15 @@ Copy this into your pull request description and tick each item:
 - [ ] All fifteen colors present as `#RRGGBB`
 - [ ] `meta.version` is semantic; `meta.author` is set
 - [ ] `README.md` and `preview@2x.png` added
-- [ ] `index.json` entry added (with `path` and `preview`)
 - [ ] `node scripts/validate.mjs` reports no errors
 - [ ] Original author credited (for ports)
 
 ## Review process
 
-1. Automated validation (schema + index sync + color format) runs on every PR.
+1. Automated validation (schema + folder structure + color format) runs on every PR.
 2. A maintainer reviews contrast, palette coherence, and metadata.
-3. Once approved and green, a maintainer merges. Published themes become available
-   through `index.json`.
+3. Once approved and green, a maintainer merges. Merged themes appear in the app's
+   theme repository automatically.
 
 ## Updating an existing theme
 

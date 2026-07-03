@@ -2,12 +2,13 @@
 
 A community registry of themes for [GitBox](https://github.com/gitgusilva/gitbox).
 A theme is a single, self-contained JSON file describing the application's color
-tokens and typography. Themes can be imported directly in the app
-(**Settings > Appearance > Import**) or consumed programmatically through the
-registry index.
+tokens and typography.
 
-Every theme lives in its own folder under `themes/`, together with its preview
-image and a short README.
+The registry is **folder-driven**: every theme lives in its own folder under
+`themes/`, together with its preview image and a short README. There is no index
+file to maintain. GitBox discovers themes by listing the `themes/` directory, so
+**adding a theme is just adding a folder** — nothing else needs to change for it
+to show up in the app's theme repository.
 
 ## Gallery
 
@@ -69,19 +70,27 @@ image and a short README.
 
 You do not need to clone this repository to use a theme.
 
-**From the app**
+**From the app (recommended)**
 
-1. Open the theme you want in the gallery above and download its `theme.json`,
-   or copy the raw URL shown on the theme's page.
-2. In GitBox, open **Settings > Appearance > Import**.
-3. Select the file. The theme is added to your gallery and applied immediately.
+Open **Settings > Appearance** in GitBox and browse the built-in theme
+repository. Every theme in this registry appears there automatically, with a
+preview, search, and light/dark filtering. Click **Install** to add one.
+
+**Manual import**
+
+Open the theme you want in the gallery above, download its `theme.json` (or copy
+its raw URL), then use **Settings > Appearance > Import** and select the file.
 
 **Programmatically**
 
-Read [`index.json`](index.json) (the machine-readable catalog), pick a theme, and
-fetch the file at its `path`. For example, the raw URL for Dracula is:
+List the theme folders through the GitHub contents API and read each
+`theme.json` from raw:
 
 ```
+# list the theme ids
+https://api.github.com/repos/gitgusilva/gitbox-themes/contents/themes
+
+# read one theme
 https://raw.githubusercontent.com/gitgusilva/gitbox-themes/main/themes/dracula/theme.json
 ```
 
@@ -89,7 +98,6 @@ https://raw.githubusercontent.com/gitgusilva/gitbox-themes/main/themes/dracula/t
 
 ```
 gitbox-themes/
-  index.json                   Registry index consumed by the app (list of themes)
   themes/                      One folder per theme, named after the theme id
     dracula/
       theme.json               The theme definition
@@ -121,9 +129,8 @@ theme's `theme.json` and change the values by hand.
 ### 2. Pick an id
 
 Choose a unique, lowercase, kebab-case id, for example `solarized-light` or
-`tokyo-night`. This id is used for the folder name, the `id` field inside
-`theme.json`, and the `index.json` entry. It must not collide with an existing
-theme.
+`tokyo-night`. This id is used for the folder name and the `id` field inside
+`theme.json`; the two must match. It must not collide with an existing theme.
 
 ### 3. Create the theme folder
 
@@ -139,25 +146,9 @@ The `theme.json` must define all fifteen color tokens as solid `#RRGGBB` values.
 Do not use alpha, `rgb()`, `hsl()`, or named colors; transparency is applied by
 the app, never stored in a theme.
 
-### 4. Add the index entry
+There is no index file to edit. The app finds your theme from the folder alone.
 
-Add an object to the `themes` array in [`index.json`](index.json), keeping the
-existing formatting:
-
-```json
-{
-  "id": "tokyo-night",
-  "name": "Tokyo Night",
-  "type": "dark",
-  "author": "Your Name",
-  "version": "1.0.0",
-  "description": "A clean, dark theme.",
-  "path": "themes/tokyo-night/theme.json",
-  "preview": "themes/tokyo-night/preview@2x.png"
-}
-```
-
-### 5. Generate the preview and write the README
+### 4. Generate the preview and write the README
 
 Generate the retina preview from your palette (requires Google Chrome or
 Chromium):
@@ -171,7 +162,7 @@ at minimum, the theme name, the preview image, and a short description. You can
 copy the structure of any existing theme's README, for example
 [`themes/dracula/README.md`](themes/dracula/README.md).
 
-### 6. Validate
+### 5. Validate
 
 Run the validator and make sure it reports no errors:
 
@@ -179,14 +170,15 @@ Run the validator and make sure it reports no errors:
 node scripts/validate.mjs
 ```
 
-It checks the schema, the color format, and that `themes/` and `index.json` stay
-in sync. The same check runs in CI on every pull request.
+It checks each folder against the schema, the color format, and that every theme
+has its `README.md` and `preview@2x.png`. The same check runs in CI on every pull
+request.
 
-### 7. Open a pull request
+### 6. Open a pull request
 
-Commit your folder and the `index.json` change, then open a pull request. The
-pull request template includes a checklist; tick each item. A maintainer reviews
-the contrast and palette coherence, and merges once the checks are green.
+Commit your theme folder and open a pull request. The pull request template
+includes a checklist; tick each item. A maintainer reviews the contrast and
+palette coherence, and merges once the checks are green.
 
 ## Theme format
 
@@ -264,30 +256,6 @@ A theme is a flat object with `id`, `name`, `type`, `colors`, `typography`, and
 | `editorFontSize`   | integer | Editor font size in px (9-24)             |
 | `editorLineHeight` | integer | Editor line height in px, `0` = automatic |
 | `radius`           | integer | Global corner radius in px (0-20)         |
-
-## Registry index
-
-`index.json` is the machine-readable catalog. Every theme folder has a matching
-entry, and the two are kept in sync by the validator.
-
-```json
-{
-  "schemaVersion": 1,
-  "name": "GitBox Themes",
-  "themes": [
-    {
-      "id": "dracula",
-      "name": "Dracula",
-      "type": "dark",
-      "author": "Dracula Theme",
-      "version": "1.0.0",
-      "description": "A dark theme for the creatures of the night.",
-      "path": "themes/dracula/theme.json",
-      "preview": "themes/dracula/preview@2x.png"
-    }
-  ]
-}
-```
 
 ## Scripts
 

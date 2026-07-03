@@ -15,9 +15,10 @@
  *   - typography fields present and within bounds
  *   - meta.version is semantic; meta.author present
  *   - README.md and preview@2x.png exist alongside it
- * And, for `index.json`:
- *   - every theme folder has an index entry and vice versa
- *   - each entry's `path` and `preview` resolve to the right files
+ *
+ * The registry is folder-driven: there is no index file to keep in sync. The
+ * app discovers themes by listing the `themes/` directory, so adding a theme is
+ * just adding a folder.
  *
  * Usage: node scripts/validate.mjs
  * Exits with a non-zero status when any check fails.
@@ -120,34 +121,12 @@ function main() {
     validateTheme(id, theme);
   }
 
-  // index.json <-> themes/ consistency
-  let index;
-  try {
-    index = readJson(join(ROOT, 'index.json'));
-  } catch (e) {
-    fail('index.json', `invalid JSON: ${e.message}`);
-    report();
-    return;
-  }
-
-  const indexed = new Map((index.themes ?? []).map((t) => [t.id, t]));
-  const folderIds = new Set(ids.filter((id) => existsSync(join(THEMES_DIR, id, 'theme.json'))));
-
-  for (const id of folderIds) {
-    if (!indexed.has(id)) fail('index.json', `missing entry for theme "${id}"`);
-  }
-  for (const entry of index.themes ?? []) {
-    if (!folderIds.has(entry.id)) fail('index.json', `entry "${entry.id}" has no matching folder in themes/`);
-    if (entry.path !== `themes/${entry.id}/theme.json`) fail('index.json', `entry "${entry.id}" path should be "themes/${entry.id}/theme.json"`);
-    if (entry.preview !== `themes/${entry.id}/preview@2x.png`) fail('index.json', `entry "${entry.id}" preview should be "themes/${entry.id}/preview@2x.png"`);
-  }
-
   report();
 }
 
 function report() {
   if (errors.length === 0) {
-    console.log('OK: all themes and the registry index are valid.');
+    console.log('OK: all themes are valid.');
     process.exit(0);
   }
   console.error(`Found ${errors.length} problem(s):`);

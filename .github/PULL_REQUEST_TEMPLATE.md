@@ -22,6 +22,5 @@
 - [ ] `meta.version` is semantic; `meta.author` is set
 - [ ] `themes/<id>/README.md` added (with the `preview@2x.png` image)
 - [ ] `themes/<id>/preview@2x.png` added (`node scripts/gen-previews.mjs <id>`)
-- [ ] `index.json` entry added (with `path` and `preview`)
 - [ ] `node scripts/validate.mjs` reports no errors
 - [ ] Original author credited (for ports)
