@@ -22,23 +22,23 @@ to show up in the app's theme repository.
     </td>
     <td width="50%" align="center" valign="top">
       <a href="themes/dracula/README.md"><img src="themes/dracula/preview@2x.png" width="100%" alt="Dracula preview"></a><br>
-      <sub><b>Dracula</b> — Dracula Theme<br><code>themes/dracula</code></sub>
+      <sub><b>Dracula</b> — GitBox<br><code>themes/dracula</code></sub>
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
       <a href="themes/one-dark-pro/README.md"><img src="themes/one-dark-pro/preview@2x.png" width="100%" alt="One Dark Pro preview"></a><br>
-      <sub><b>One Dark Pro</b> — binaryify<br><code>themes/one-dark-pro</code></sub>
+      <sub><b>One Dark Pro</b> — GitBox<br><code>themes/one-dark-pro</code></sub>
     </td>
     <td width="50%" align="center" valign="top">
       <a href="themes/nord/README.md"><img src="themes/nord/preview@2x.png" width="100%" alt="Nord preview"></a><br>
-      <sub><b>Nord</b> — Arctic Ice Studio<br><code>themes/nord</code></sub>
+      <sub><b>Nord</b> — GitBox<br><code>themes/nord</code></sub>
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
       <a href="themes/monokai/README.md"><img src="themes/monokai/preview@2x.png" width="100%" alt="Monokai preview"></a><br>
-      <sub><b>Monokai</b> — Wimer Hazenberg<br><code>themes/monokai</code></sub>
+      <sub><b>Monokai</b> — GitBox<br><code>themes/monokai</code></sub>
     </td>
     <td width="50%"></td>
   </tr>
@@ -54,15 +54,8 @@ to show up in the app's theme repository.
     </td>
     <td width="50%" align="center" valign="top">
       <a href="themes/solarized-light/README.md"><img src="themes/solarized-light/preview@2x.png" width="100%" alt="Solarized Light preview"></a><br>
-      <sub><b>Solarized Light</b> — Ethan Schoonover<br><code>themes/solarized-light</code></sub>
+      <sub><b>Solarized Light</b> — GitBox<br><code>themes/solarized-light</code></sub>
     </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <a href="themes/github-light/README.md"><img src="themes/github-light/preview@2x.png" width="100%" alt="GitHub Light preview"></a><br>
-      <sub><b>GitHub Light</b> — GitHub<br><code>themes/github-light</code></sub>
-    </td>
-    <td width="50%"></td>
   </tr>
 </table>
 
