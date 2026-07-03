@@ -7,7 +7,7 @@ Precision colors for machines and people.
 | | |
 | --- | --- |
 | Type | Light |
-| Author | Ethan Schoonover |
+| Author | GitBox |
 | Version | 1.0.0 |
 
 ## Install
@@ -56,7 +56,7 @@ https://raw.githubusercontent.com/gitgusilva/gitbox-themes/main/themes/solarized
 
 ## Credits
 
-Palette based on the original work by Ethan Schoonover. Ported to the GitBox token model.
+Part of the default GitBox theme set.
 
 ---
 

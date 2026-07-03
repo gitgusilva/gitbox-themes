@@ -4,8 +4,7 @@
   "type": "dark",
   "meta": {
     "version": "1.0.0",
-    "author": "Dracula Theme",
-    "authorEmail": "hello@draculatheme.com",
+    "author": "GitBox",
     "description": "A dark theme for the creatures of the night."
   },
   "colors": {

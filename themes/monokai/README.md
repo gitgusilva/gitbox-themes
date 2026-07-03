@@ -7,7 +7,7 @@ The classic Monokai palette.
 | | |
 | --- | --- |
 | Type | Dark |
-| Author | Wimer Hazenberg |
+| Author | GitBox |
 | Version | 1.0.0 |
 
 ## Install
@@ -56,7 +56,7 @@ https://raw.githubusercontent.com/gitgusilva/gitbox-themes/main/themes/monokai/t
 
 ## Credits
 
-Palette based on the original work by Wimer Hazenberg. Ported to the GitBox token model.
+Part of the default GitBox theme set.
 
 ---
 

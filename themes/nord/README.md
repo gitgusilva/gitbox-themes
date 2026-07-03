@@ -7,7 +7,7 @@ An arctic, north-bluish color palette.
 | | |
 | --- | --- |
 | Type | Dark |
-| Author | Arctic Ice Studio |
+| Author | GitBox |
 | Version | 1.0.0 |
 
 ## Install
@@ -56,7 +56,7 @@ https://raw.githubusercontent.com/gitgusilva/gitbox-themes/main/themes/nord/them
 
 ## Credits
 
-Palette based on the original work by Arctic Ice Studio. Ported to the GitBox token model.
+Part of the default GitBox theme set.
 
 ---
 
