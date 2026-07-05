@@ -37,6 +37,11 @@ const COLOR_KEYS = [
   'accent', 'accentHover', 'accentFg',
   'added', 'removed', 'modified',
 ];
+// Commit-graph palette + merge marker: allowed but optional (themes fall back to
+// GitBox defaults when omitted).
+const OPTIONAL_COLOR_KEYS = [
+  'graph1', 'graph2', 'graph3', 'graph4', 'graph5', 'graph6', 'graph7', 'graph8', 'graphMarker',
+];
 const TYPO_BOUNDS = {
   uiFontSize: [10, 20],
   editorFontSize: [9, 24],
@@ -77,7 +82,7 @@ function validateTheme(id, theme) {
     else if (!HEX.test(colors[key])) fail(where, `color "${key}" must be #RRGGBB, got "${colors[key]}"`);
   }
   for (const key of Object.keys(colors)) {
-    if (!COLOR_KEYS.includes(key)) fail(where, `unknown color "${key}"`);
+    if (!COLOR_KEYS.includes(key) && !OPTIONAL_COLOR_KEYS.includes(key)) fail(where, `unknown color "${key}"`);
   }
 
   const typo = theme.typography ?? {};

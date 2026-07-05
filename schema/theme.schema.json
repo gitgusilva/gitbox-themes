@@ -45,7 +45,7 @@
         "added", "removed", "modified"
       ],
       "patternProperties": {
-        "^(bg|bgElevated|bgOverlay|surfaceHover|border|borderStrong|textStrong|text|textMuted|accent|accentHover|accentFg|added|removed|modified)$": {
+        "^(bg|bgElevated|bgOverlay|surfaceHover|border|borderStrong|textStrong|text|textMuted|accent|accentHover|accentFg|added|removed|modified|graph[1-8]|graphMarker)$": {
           "type": "string",
           "description": "Solid color in #RRGGBB form (no alpha).",
           "pattern": "^#[0-9A-Fa-f]{6}$"

@@ -22,7 +22,16 @@
     "accentFg": "#282A36",
     "added": "#50FA7B",
     "removed": "#FF5555",
-    "modified": "#8BE9FD"
+    "modified": "#8BE9FD",
+    "graph1": "#BD93F9",
+    "graph2": "#FF79C6",
+    "graph3": "#50FA7B",
+    "graph4": "#8BE9FD",
+    "graph5": "#FFB86C",
+    "graph6": "#FF5555",
+    "graph7": "#F1FA8C",
+    "graph8": "#6272A4",
+    "graphMarker": "#F8F8F2"
   },
   "typography": {
     "uiFont": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif",
