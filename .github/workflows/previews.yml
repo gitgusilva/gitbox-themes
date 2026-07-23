@@ -1,0 +1,62 @@
+name: Regenerate previews
+
+# Regenerates theme preview images on pull requests so contributors do not need
+# a local Chrome. For pull requests from a branch in this repository the images
+# are committed back automatically; for forked pull requests the token is
+# read-only, so the job only reports that previews need to be added.
+
+on:
+  pull_request:
+    paths:
+      - "themes/**/theme.json"
+      - "scripts/gen-previews.mjs"
+
+permissions:
+  contents: write
+
+jobs:
+  previews:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout pull request branch
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Set up Chrome
+        id: chrome
+        uses: browser-actions/setup-chrome@v1
+        with:
+          install-dependencies: true
+
+      - name: Regenerate previews
+        env:
+          CHROME_BIN: ${{ steps.chrome.outputs.chrome-path }}
+        run: node scripts/gen-previews.mjs
+
+      - name: Validate registry
+        run: node scripts/validate.mjs
+
+      - name: Commit regenerated previews
+        if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: regenerate theme previews"
+          file_pattern: "themes/**/preview@2x.png"
+
+      - name: Report for forked pull requests
+        if: ${{ github.event.pull_request.head.repo.full_name != github.repository }}
+        run: |
+          if git diff --quiet -- 'themes/**/preview@2x.png'; then
+            echo "Previews are up to date."
+          else
+            echo "::warning::Previews were regenerated but this pull request comes from a fork, so they could not be pushed automatically. Enable 'Allow edits by maintainers' so a maintainer can add them, or run 'node scripts/gen-previews.mjs' locally and commit the images."
+            git --no-pager diff --stat -- 'themes/**/preview@2x.png'
+          fi

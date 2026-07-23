@@ -29,11 +29,15 @@ A submission is accepted only when all of the following hold:
    but encouraged.
 6. **Typography.** Keep the default typography unless the theme deliberately ships a
    font choice. Font sizes must stay within the schema bounds.
-7. **Preview.** `preview@2x.png` is **required** and must be generated with
-   `node scripts/gen-previews.mjs <id>` (needs Google Chrome or Chromium). Do not
-   hand-edit or hand-make it; it is derived from the palette so previews stay
-   consistent. The validator enforces the exact retina size (1440x920), so an
-   ad-hoc screenshot will fail.
+7. **Preview.** `preview@2x.png` is **required**. It is derived from the palette,
+   so do not hand-edit or hand-make it. You have two options:
+   - **Let CI generate it.** Open the pull request from a branch in this repository
+     and the `Regenerate previews` workflow builds and commits the image for you —
+     no local Chrome needed. (For pull requests from a fork, enable "Allow edits by
+     maintainers" so a maintainer can add it, or generate it locally as below.)
+   - **Generate it locally** with `node scripts/gen-previews.mjs <id>` (needs Google
+     Chrome or Chromium). The validator enforces the exact retina size (1440x920),
+     so an ad-hoc screenshot will fail.
 8. **README.** `README.md` includes the theme name, the `preview@2x.png` image, and a
    short description. Copy the structure of an existing theme's README.
 9. **Validation passes.** Run `node scripts/validate.mjs` locally; it must report no
