@@ -61,6 +61,11 @@ themes by listing the `themes/` directory, so adding a folder is all it takes.
 - **Consistent surfaces.** `bg` < `bgElevated` < `bgOverlay` should read as a
   coherent elevation scale for the theme's `type`.
 - **Accent contrast.** `accentFg` must be legible on top of `accent`.
+- **Graph lanes that suit the background.** The eight lanes must be tellable
+  apart from one another and hold up against your `bg` — saturated neons read
+  well on a dark background and wash out on a light one, where darker and more
+  muted wins. `graphMarker` is not a colour choice: it must equal `bg`, because
+  the merge glyph is carved out of the background.
 
 ## Derivative and third-party themes
 
@@ -76,7 +81,8 @@ Copy this into your pull request description and tick each item:
 - [ ] Files live in `themes/<id>/` and `id` matches the folder name
 - [ ] `id` is a unique lowercase kebab-case slug
 - [ ] `theme.json` validates against `schema/theme.schema.json`
-- [ ] All fifteen colors present as `#RRGGBB`
+- [ ] All twenty-four colors present as `#RRGGBB`, graph lanes included
+- [ ] `graphMarker` equals `bg`, and the eight lanes are all different
 - [ ] `meta.version` is semantic; `meta.author` is set
 - [ ] `README.md` and `preview@2x.png` added
 - [ ] `node scripts/validate.mjs` reports no errors

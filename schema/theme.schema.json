@@ -37,12 +37,16 @@
     "colors": {
       "type": "object",
       "additionalProperties": false,
+      "description": "Every token is required. The commit-graph lanes used to be optional, and a theme that left them out fell back to one fixed palette — so the graph looked identical under every theme, and lanes tuned for a dark background landed on white ones.",
       "required": [
         "bg", "bgElevated", "bgOverlay", "surfaceHover",
         "border", "borderStrong",
         "textStrong", "text", "textMuted",
         "accent", "accentHover", "accentFg",
-        "added", "removed", "modified"
+        "added", "removed", "modified",
+        "graph1", "graph2", "graph3", "graph4",
+        "graph5", "graph6", "graph7", "graph8",
+        "graphMarker"
       ],
       "patternProperties": {
         "^(bg|bgElevated|bgOverlay|surfaceHover|border|borderStrong|textStrong|text|textMuted|accent|accentHover|accentFg|added|removed|modified|graph[1-8]|graphMarker)$": {

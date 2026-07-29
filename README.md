@@ -204,7 +204,16 @@ A theme is a flat object with `id`, `name`, `type`, `colors`, `typography`, and
     "accentFg": "#282A36",
     "added": "#50FA7B",
     "removed": "#FF5555",
-    "modified": "#8BE9FD"
+    "modified": "#8BE9FD",
+    "graph1": "#BD93F9",
+    "graph2": "#FF79C6",
+    "graph3": "#50FA7B",
+    "graph4": "#8BE9FD",
+    "graph5": "#FFB86C",
+    "graph6": "#FF5555",
+    "graph7": "#F1FA8C",
+    "graph8": "#6272A4",
+    "graphMarker": "#282A36"
   },
   "typography": {
     "uiFont": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif",
@@ -237,6 +246,24 @@ A theme is a flat object with `id`, `name`, `type`, `colors`, `typography`, and
 | `added`        | Git added / incoming                       |
 | `removed`      | Git removed                                |
 | `modified`     | Git modified / current                     |
+| `graph1`–`graph8` | The eight commit-graph branch lanes     |
+| `graphMarker`  | Merge glyph, carved out of the background  |
+
+Every token above is required, the graph ones included. They were optional once,
+and a theme that left them out silently borrowed one fixed palette — so the graph
+looked the same under every theme, and lanes tuned for a dark background ended up
+on white ones.
+
+Two rules the validator enforces for the graph:
+
+- **`graphMarker` must equal `bg`.** GitBox rings the commit dot with the
+  background and stamps the marker inside it, so the merge glyph reads as a
+  cut-out. Any other colour turns it into a blob.
+- **The eight lanes must all differ.** Two lanes sharing a colour makes two
+  branches indistinguishable, which is the whole point of the palette.
+
+Pick lanes that hold up against *your* `bg`: saturated neons read well on a dark
+background and wash out on a light one, where darker and more muted wins.
 
 ### Typography
 

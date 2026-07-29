@@ -11,7 +11,9 @@
  *   - valid JSON and required top-level fields
  *   - id matches the folder name and the slug pattern
  *   - type is "light" or "dark"
- *   - all fifteen color tokens present as #RRGGBB
+ *   - all twenty-four color tokens present as #RRGGBB
+ *   - graphMarker equals bg (the merge glyph is a cut-out of the background)
+ *   - the eight graph lanes are all different from one another
  *   - typography fields present and within bounds
  *   - meta.version is semantic; meta.author present
  *   - README.md and preview@2x.png exist alongside it
@@ -30,18 +32,20 @@ import { dirname, join } from 'node:path';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const THEMES_DIR = join(ROOT, 'themes');
 
-const COLOR_KEYS = [
+const BASE_COLOR_KEYS = [
   'bg', 'bgElevated', 'bgOverlay', 'surfaceHover',
   'border', 'borderStrong',
   'textStrong', 'text', 'textMuted',
   'accent', 'accentHover', 'accentFg',
   'added', 'removed', 'modified',
 ];
-// Commit-graph palette + merge marker: allowed but optional (themes fall back to
-// GitBox defaults when omitted).
-const OPTIONAL_COLOR_KEYS = [
-  'graph1', 'graph2', 'graph3', 'graph4', 'graph5', 'graph6', 'graph7', 'graph8', 'graphMarker',
-];
+/**
+ * The eight commit-graph lanes. Required, not optional: a theme that omits them
+ * falls back to one fixed palette, which made the graph look identical under
+ * every theme and put lanes tuned for #1E1E1E on white backgrounds.
+ */
+const LANE_KEYS = ['graph1', 'graph2', 'graph3', 'graph4', 'graph5', 'graph6', 'graph7', 'graph8'];
+const COLOR_KEYS = [...BASE_COLOR_KEYS, ...LANE_KEYS, 'graphMarker'];
 const TYPO_BOUNDS = {
   uiFontSize: [10, 20],
   editorFontSize: [9, 24],
@@ -82,7 +86,23 @@ function validateTheme(id, theme) {
     else if (!HEX.test(colors[key])) fail(where, `color "${key}" must be #RRGGBB, got "${colors[key]}"`);
   }
   for (const key of Object.keys(colors)) {
-    if (!COLOR_KEYS.includes(key) && !OPTIONAL_COLOR_KEYS.includes(key)) fail(where, `unknown color "${key}"`);
+    if (!COLOR_KEYS.includes(key)) fail(where, `unknown color "${key}"`);
+  }
+
+  // The merge glyph is drawn as a cut-out of the background: GitBox rings the
+  // commit dot with --gb-bg and stamps the marker inside it. A marker of any
+  // other colour stops reading as a cut-out and shows up as a blob.
+  if (HEX.test(colors.graphMarker ?? '') && HEX.test(colors.bg ?? '')
+      && colors.graphMarker.toUpperCase() !== colors.bg.toUpperCase()) {
+    fail(where, `graphMarker must equal bg (${colors.bg}), got "${colors.graphMarker}"`);
+  }
+
+  // Eight lanes that repeat a colour make two branches indistinguishable in the
+  // graph, which is the one thing the lane palette exists to prevent.
+  const lanes = LANE_KEYS.map((k) => colors[k]).filter((v) => HEX.test(v ?? '')).map((v) => v.toUpperCase());
+  if (lanes.length === LANE_KEYS.length && new Set(lanes).size !== LANE_KEYS.length) {
+    const dupes = [...new Set(lanes.filter((v, i) => lanes.indexOf(v) !== i))];
+    fail(where, `the 8 graph lanes must all differ; repeated: ${dupes.join(', ')}`);
   }
 
   const typo = theme.typography ?? {};
