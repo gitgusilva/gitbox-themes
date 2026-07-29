@@ -3,7 +3,7 @@
   "name": "GitBox Light",
   "type": "light",
   "meta": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "GitBox",
     "description": "Default light theme."
   },
@@ -23,14 +23,14 @@
     "added": "#1A7F37",
     "removed": "#CF222E",
     "modified": "#0969DA",
-    "graph1": "#1E88E5",
-    "graph2": "#F59E0B",
-    "graph3": "#16A34A",
-    "graph4": "#9333EA",
-    "graph5": "#EA580C",
-    "graph6": "#0891B2",
-    "graph7": "#0D9488",
-    "graph8": "#DB2777",
+    "graph1": "#0969DA",
+    "graph2": "#BF8700",
+    "graph3": "#1A7F37",
+    "graph4": "#8250DF",
+    "graph5": "#CF222E",
+    "graph6": "#0598BC",
+    "graph7": "#117F6E",
+    "graph8": "#BF3989",
     "graphMarker": "#FFFFFF"
   },
   "typography": {

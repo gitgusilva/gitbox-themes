@@ -3,7 +3,7 @@
   "name": "Nord",
   "type": "dark",
   "meta": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "GitBox",
     "description": "An arctic, north-bluish color palette."
   },
@@ -31,7 +31,7 @@
     "graph6": "#BF616A",
     "graph7": "#D08770",
     "graph8": "#5E81AC",
-    "graphMarker": "#ECEFF4"
+    "graphMarker": "#2E3440"
   },
   "typography": {
     "uiFont": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif",

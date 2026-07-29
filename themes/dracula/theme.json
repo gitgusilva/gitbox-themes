@@ -3,7 +3,7 @@
   "name": "Dracula",
   "type": "dark",
   "meta": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "GitBox",
     "description": "A dark theme for the creatures of the night."
   },
@@ -31,7 +31,7 @@
     "graph6": "#FF5555",
     "graph7": "#F1FA8C",
     "graph8": "#6272A4",
-    "graphMarker": "#F8F8F2"
+    "graphMarker": "#282A36"
   },
   "typography": {
     "uiFont": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif",

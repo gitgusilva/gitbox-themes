@@ -3,7 +3,7 @@
   "name": "One Dark Pro",
   "type": "dark",
   "meta": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "GitBox",
     "description": "Atom's iconic One Dark, refined."
   },
@@ -31,7 +31,7 @@
     "graph6": "#56B6C2",
     "graph7": "#D19A66",
     "graph8": "#BE5046",
-    "graphMarker": "#FFFFFF"
+    "graphMarker": "#282C34"
   },
   "typography": {
     "uiFont": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif",

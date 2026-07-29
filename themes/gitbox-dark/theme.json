@@ -3,7 +3,7 @@
   "name": "GitBox Dark",
   "type": "dark",
   "meta": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "GitBox",
     "description": "Default dark theme."
   },
@@ -31,7 +31,7 @@
     "graph6": "#00B0FF",
     "graph7": "#1DE9B6",
     "graph8": "#F50057",
-    "graphMarker": "#FFFFFF"
+    "graphMarker": "#1E1E1E"
   },
   "typography": {
     "uiFont": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif",

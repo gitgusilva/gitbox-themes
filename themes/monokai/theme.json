@@ -3,7 +3,7 @@
   "name": "Monokai",
   "type": "dark",
   "meta": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "GitBox",
     "description": "The classic Monokai palette."
   },
@@ -31,7 +31,7 @@
     "graph6": "#E6DB74",
     "graph7": "#FC9867",
     "graph8": "#78DCE8",
-    "graphMarker": "#F8F8F2"
+    "graphMarker": "#272822"
   },
   "typography": {
     "uiFont": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif",
