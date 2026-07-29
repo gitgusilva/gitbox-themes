@@ -21,7 +21,6 @@
 import { readFileSync, readdirSync, mkdtempSync, writeFileSync, rmSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { tmpdir } from 'node:os';
 import { execFileSync } from 'node:child_process';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -191,7 +190,11 @@ function hexA(hex, alpha) {
 }
 
 function render(chrome, theme, outPng) {
-  const dir = mkdtempSync(join(tmpdir(), 'gbx-preview-'));
+  // Keep the temp HTML under the repo so snap-confined Chromium can read it.
+  // os.tmpdir() is usually /tmp, which snaps cannot access (ERR_FILE_NOT_FOUND /
+  // ERR_ACCESS_DENIED), producing a blank error-page screenshot that still
+  // passes the 1440x920 size check.
+  const dir = mkdtempSync(join(ROOT, '.preview-tmp-'));
   const htmlPath = join(dir, `${theme.id}.html`);
   writeFileSync(htmlPath, html(theme));
   try {
