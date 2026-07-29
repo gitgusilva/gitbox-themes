@@ -1,0 +1,45 @@
+{
+  "id": "solarized-dark",
+  "name": "Solarized Dark",
+  "type": "dark",
+  "meta": {
+    "version": "1.0.0",
+    "author": "GitBox",
+    "description": "Precision colors for machines and people."
+  },
+  "colors": {
+    "bg": "#002B36",
+    "bgElevated": "#073642",
+    "bgOverlay": "#002B36",
+    "surfaceHover": "#0A3B47",
+    "border": "#073642",
+    "borderStrong": "#586E75",
+    "textStrong": "#FDF6E3",
+    "text": "#839496",
+    "textMuted": "#586E75",
+    "accent": "#268BD2",
+    "accentHover": "#3A9BE0",
+    "accentFg": "#002B36",
+    "added": "#859900",
+    "removed": "#DC322F",
+    "modified": "#268BD2",
+    "graph1": "#268BD2",
+    "graph2": "#2AA198",
+    "graph3": "#859900",
+    "graph4": "#B58900",
+    "graph5": "#CB4B16",
+    "graph6": "#DC322F",
+    "graph7": "#D33682",
+    "graph8": "#6C71C4",
+    "graphMarker": "#002B36"
+  },
+  "typography": {
+    "uiFont": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif",
+    "uiFontSize": 13,
+    "monoFont": "'IBM Plex Mono', 'SF Mono', Consolas, monospace",
+    "editorFont": "'IBM Plex Mono', 'SF Mono', Consolas, 'Courier New', monospace",
+    "editorFontSize": 13,
+    "editorLineHeight": 0,
+    "radius": 6
+  }
+}
