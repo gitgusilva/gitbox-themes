@@ -40,7 +40,10 @@ to show up in the app's theme repository.
       <a href="themes/monokai/README.md"><img src="themes/monokai/preview@2x.png" width="100%" alt="Monokai preview"></a><br>
       <sub><b>Monokai</b> — GitBox<br><code>themes/monokai</code></sub>
     </td>
-    <td width="50%"></td>
+    <td width="50%" align="center" valign="top">
+      <a href="themes/gruvbox-dark/README.md"><img src="themes/gruvbox-dark/preview@2x.png" width="100%" alt="Gruvbox Dark preview"></a><br>
+      <sub><b>Gruvbox Dark</b> — GitBox<br><code>themes/gruvbox-dark</code></sub>
+    </td>
   </tr>
 </table>
 
