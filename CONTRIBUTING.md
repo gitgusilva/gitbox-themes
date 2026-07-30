@@ -25,8 +25,10 @@ A submission is accepted only when all of the following hold:
    Do not use alpha, `rgb()`, `hsl()`, or named colors. Transparency is applied by
    the app, never stored in a theme.
 5. **Metadata.** `meta.version` follows semantic versioning (`MAJOR.MINOR.PATCH`).
-   `meta.author` is required. `meta.authorEmail` and `meta.description` are optional
-   but encouraged.
+   `meta.author` is required, and it is a credit line: use the name you want shown,
+   spelled the way you write it, not a handle or a login. `meta.authorUrl` (an
+   **https** link to your profile or the theme's repository), `meta.authorEmail`,
+   and `meta.description` are optional but encouraged.
 6. **Typography.** Keep the default typography unless the theme deliberately ships a
    font choice. Font sizes must stay within the schema bounds.
 7. **Preview.** `preview@2x.png` is **required**. It is derived from the palette,
@@ -83,7 +85,8 @@ Copy this into your pull request description and tick each item:
 - [ ] `theme.json` validates against `schema/theme.schema.json`
 - [ ] All twenty-four colors present as `#RRGGBB`, graph lanes included
 - [ ] `graphMarker` equals `bg`, and the eight lanes are all different
-- [ ] `meta.version` is semantic; `meta.author` is set
+- [ ] `meta.version` is semantic; `meta.author` is set to your name
+- [ ] `meta.authorUrl`, if present, is an https link to you or the theme's repo
 - [ ] `README.md` and `preview@2x.png` added
 - [ ] `node scripts/validate.mjs` reports no errors
 - [ ] Original author credited (for ports)

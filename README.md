@@ -130,8 +130,9 @@ Choose a unique, lowercase, kebab-case id, for example `solarized-light` or
 Add a new folder `themes/<id>/` containing:
 
 - `theme.json` — your exported theme. Set `id` to your chosen id, and fill in
-  `meta.author` (required), `meta.version` (semantic, start at `1.0.0`), and an
-  optional `meta.description`.
+  `meta.author` (required), `meta.version` (semantic, start at `1.0.0`), and the
+  optional `meta.description` and `meta.authorUrl` — an https link to your GitHub
+  profile or the theme's repository, so the credit in the app points somewhere.
 - `preview@2x.png` — the preview image (see step 5).
 - `README.md` — the theme's page (see step 5).
 
@@ -187,6 +188,7 @@ A theme is a flat object with `id`, `name`, `type`, `colors`, `typography`, and
     "version": "1.0.0",
     "author": "Dracula Theme",
     "authorEmail": "hello@draculatheme.com",
+    "authorUrl": "https://github.com/dracula",
     "description": "A dark theme for the creatures of the night."
   },
   "colors": {
