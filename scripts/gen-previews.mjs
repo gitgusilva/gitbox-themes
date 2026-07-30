@@ -198,10 +198,15 @@ function render(chrome, theme, outPng) {
   const htmlPath = join(dir, `${theme.id}.html`);
   writeFileSync(htmlPath, html(theme));
   try {
+    // --no-sandbox / --disable-dev-shm-usage: required on GitHub Actions and
+    // many other CI runners; without them headless Chromium often dies with
+    // SIGABRT before writing the screenshot.
     execFileSync(
       chrome,
       [
         '--headless=new',
+        '--no-sandbox',
+        '--disable-dev-shm-usage',
         '--disable-gpu',
         '--hide-scrollbars',
         '--default-background-color=00000000',
@@ -210,8 +215,12 @@ function render(chrome, theme, outPng) {
         `--screenshot=${outPng}`,
         `file://${htmlPath}`,
       ],
-      { stdio: 'ignore' },
+      { stdio: ['ignore', 'ignore', 'pipe'] },
     );
+  } catch (err) {
+    const stderr = err.stderr ? String(err.stderr).trim() : '';
+    if (stderr) console.error(stderr);
+    throw err;
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
