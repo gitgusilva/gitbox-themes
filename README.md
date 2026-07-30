@@ -60,7 +60,10 @@ to show up in the app's theme repository.
       <a href="themes/catppuccin-mocha/README.md"><img src="themes/catppuccin-mocha/preview@2x.png" width="100%" alt="Catppuccin Mocha preview"></a><br>
       <sub><b>Catppuccin Mocha</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/catppuccin-mocha</code></sub>
     </td>
-    <td width="50%"></td>
+    <td width="50%" align="center" valign="top">
+      <a href="themes/arrakis-dark/README.md"><img src="themes/arrakis-dark/preview@2x.png" width="100%" alt="Arrakis Dark preview"></a><br>
+      <sub><b>Arrakis Dark</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/arrakis-dark</code></sub>
+    </td>
   </tr>
 </table>
 
