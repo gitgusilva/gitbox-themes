@@ -1,0 +1,46 @@
+{
+  "id": "arrakis-dark",
+  "name": "Arrakis Dark",
+  "type": "dark",
+  "meta": {
+    "version": "1.0.0",
+    "author": "Hermes Santos",
+    "authorUrl": "https://github.com/HermesSantos",
+    "description": "A desert-inspired dark theme from the sands of Arrakis."
+  },
+  "colors": {
+    "bg": "#16120D",
+    "bgElevated": "#211A12",
+    "bgOverlay": "#2B2117",
+    "surfaceHover": "#3A2D1F",
+    "border": "#4A3927",
+    "borderStrong": "#6B5234",
+    "textStrong": "#F4E3C1",
+    "text": "#C8B38A",
+    "textMuted": "#8C7655",
+    "accent": "#D4A017",
+    "accentHover": "#E6B93D",
+    "accentFg": "#16120D",
+    "added": "#A8B545",
+    "removed": "#C45B3C",
+    "modified": "#D4A017",
+    "graph1": "#D4A017",
+    "graph2": "#C98B3C",
+    "graph3": "#A8B545",
+    "graph4": "#E6B93D",
+    "graph5": "#B86B35",
+    "graph6": "#C45B3C",
+    "graph7": "#9B6B43",
+    "graph8": "#7C8A8B",
+    "graphMarker": "#16120D"
+  },
+  "typography": {
+    "uiFont": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif",
+    "uiFontSize": 13,
+    "monoFont": "'IBM Plex Mono', 'SF Mono', Consolas, monospace",
+    "editorFont": "'IBM Plex Mono', 'SF Mono', Consolas, 'Courier New', monospace",
+    "editorFontSize": 13,
+    "editorLineHeight": 0,
+    "radius": 6
+  }
+}
