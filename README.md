@@ -60,7 +60,10 @@ to show up in the app's theme repository.
       <a href="themes/catppuccin-mocha/README.md"><img src="themes/catppuccin-mocha/preview@2x.png" width="100%" alt="Catppuccin Mocha preview"></a><br>
       <sub><b>Catppuccin Mocha</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/catppuccin-mocha</code></sub>
     </td>
-    <td width="50%"></td>
+    <td width="50%" align="center" valign="top">
+      <a href="themes/rose-pine/README.md"><img src="themes/rose-pine/preview@2x.png" width="100%" alt="Rosé Pine preview"></a><br>
+      <sub><b>Rosé Pine</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/rose-pine</code></sub>
+    </td>
   </tr>
 </table>
 
