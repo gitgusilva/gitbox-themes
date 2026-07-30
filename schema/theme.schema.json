@@ -31,6 +31,13 @@
         "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
         "author": { "type": "string", "maxLength": 80 },
         "authorEmail": { "type": "string", "format": "email" },
+        "authorUrl": {
+          "type": "string",
+          "description": "Public https URL for the author: their profile, site, or the repository the theme came from.",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 200
+        },
         "description": { "type": "string", "maxLength": 200 }
       }
     },

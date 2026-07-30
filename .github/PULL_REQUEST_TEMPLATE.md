@@ -5,7 +5,8 @@
 - Name:
 - Id (folder `themes/<id>/`):
 - Type: light / dark
-- Author:
+- Author (the name to credit, as you spell it):
+- Author URL (https link to your profile or the theme's repo):
 - Source / original author (for ports):
 
 ## Description
@@ -19,7 +20,8 @@
 - [ ] `id` is a unique lowercase kebab-case slug
 - [ ] `themes/<id>/theme.json` validates against `schema/theme.schema.json`
 - [ ] All fifteen colors present as `#RRGGBB`
-- [ ] `meta.version` is semantic; `meta.author` is set
+- [ ] `meta.version` is semantic; `meta.author` is your name (not a login)
+- [ ] `meta.authorUrl`, if present, is an https link
 - [ ] `themes/<id>/README.md` added (with the `preview@2x.png` image)
 - [ ] `themes/<id>/preview@2x.png` added (`node scripts/gen-previews.mjs <id>`)
 - [ ] `node scripts/validate.mjs` reports no errors

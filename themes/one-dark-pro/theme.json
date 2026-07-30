@@ -5,6 +5,7 @@
   "meta": {
     "version": "1.0.1",
     "author": "GitBox",
+    "authorUrl": "https://github.com/gitgusilva/gitbox",
     "description": "Atom's iconic One Dark, refined."
   },
   "colors": {

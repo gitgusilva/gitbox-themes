@@ -40,6 +40,26 @@ to show up in the app's theme repository.
       <a href="themes/monokai/README.md"><img src="themes/monokai/preview@2x.png" width="100%" alt="Monokai preview"></a><br>
       <sub><b>Monokai</b> — GitBox<br><code>themes/monokai</code></sub>
     </td>
+    <td width="50%" align="center" valign="top">
+      <a href="themes/solarized-osaka/README.md"><img src="themes/solarized-osaka/preview@2x.png" width="100%" alt="Solarized Osaka preview"></a><br>
+      <sub><b>Solarized Osaka</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/solarized-osaka</code></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="themes/solarized-dark/README.md"><img src="themes/solarized-dark/preview@2x.png" width="100%" alt="Solarized Dark preview"></a><br>
+      <sub><b>Solarized Dark</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/solarized-dark</code></sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <a href="themes/gruvbox-dark/README.md"><img src="themes/gruvbox-dark/preview@2x.png" width="100%" alt="Gruvbox Dark preview"></a><br>
+      <sub><b>Gruvbox Dark</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/gruvbox-dark</code></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="themes/catppuccin-mocha/README.md"><img src="themes/catppuccin-mocha/preview@2x.png" width="100%" alt="Catppuccin Mocha preview"></a><br>
+      <sub><b>Catppuccin Mocha</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/catppuccin-mocha</code></sub>
+    </td>
     <td width="50%"></td>
   </tr>
 </table>
@@ -130,8 +150,9 @@ Choose a unique, lowercase, kebab-case id, for example `solarized-light` or
 Add a new folder `themes/<id>/` containing:
 
 - `theme.json` — your exported theme. Set `id` to your chosen id, and fill in
-  `meta.author` (required), `meta.version` (semantic, start at `1.0.0`), and an
-  optional `meta.description`.
+  `meta.author` (required), `meta.version` (semantic, start at `1.0.0`), and the
+  optional `meta.description` and `meta.authorUrl` — an https link to your GitHub
+  profile or the theme's repository, so the credit in the app points somewhere.
 - `preview@2x.png` — the preview image (see step 5).
 - `README.md` — the theme's page (see step 5).
 
@@ -187,6 +208,7 @@ A theme is a flat object with `id`, `name`, `type`, `colors`, `typography`, and
     "version": "1.0.0",
     "author": "Dracula Theme",
     "authorEmail": "hello@draculatheme.com",
+    "authorUrl": "https://github.com/dracula",
     "description": "A dark theme for the creatures of the night."
   },
   "colors": {

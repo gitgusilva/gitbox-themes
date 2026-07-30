@@ -15,7 +15,7 @@
  *   - graphMarker equals bg (the merge glyph is a cut-out of the background)
  *   - the eight graph lanes are all different from one another
  *   - typography fields present and within bounds
- *   - meta.version is semantic; meta.author present
+ *   - meta.version is semantic; meta.author present; meta.authorUrl is https
  *   - README.md and preview@2x.png exist alongside it
  *
  * The registry is folder-driven: there is no index file to keep in sync. The
@@ -55,6 +55,12 @@ const TYPO_BOUNDS = {
 const HEX = /^#[0-9A-Fa-f]{6}$/;
 const SLUG = /^[a-z0-9][a-z0-9-]*$/;
 const SEMVER = /^\d+\.\d+\.\d+$/;
+// meta.authorUrl is rendered as a link in the app's theme repository, so it is
+// https-only: an http or javascript: URL would be a live link out of a file
+// anyone can open a pull request against.
+const AUTHOR_URL = /^https:\/\/[^\s]+$/;
+/** Mirrors the schema's `meta` object, which is additionalProperties: false. */
+const META_KEYS = ['version', 'author', 'authorEmail', 'authorUrl', 'description'];
 
 // Every preview must be the retina image produced by scripts/gen-previews.mjs
 // (720x460 logical at a 2x device scale). This makes the generated preview
@@ -79,6 +85,13 @@ function validateTheme(id, theme) {
 
   if (!theme.meta || !SEMVER.test(theme.meta.version ?? '')) fail(where, 'meta.version must be semantic (MAJOR.MINOR.PATCH)');
   if (!theme.meta?.author) fail(where, 'meta.author is required');
+  const authorUrl = theme.meta?.authorUrl;
+  if (authorUrl !== undefined && (typeof authorUrl !== 'string' || !AUTHOR_URL.test(authorUrl))) {
+    fail(where, `meta.authorUrl must be an https URL, got "${authorUrl}"`);
+  }
+  for (const key of Object.keys(theme.meta ?? {})) {
+    if (!META_KEYS.includes(key)) fail(where, `unknown meta field "${key}"`);
+  }
 
   const colors = theme.colors ?? {};
   for (const key of COLOR_KEYS) {
