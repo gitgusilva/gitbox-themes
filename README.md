@@ -80,6 +80,13 @@ to show up in the app's theme repository.
       <sub><b>Solarized Light</b> — GitBox<br><code>themes/solarized-light</code></sub>
     </td>
   </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="themes/rose-pine-dawn/README.md"><img src="themes/rose-pine-dawn/preview@2x.png" width="100%" alt="Rosé Pine Dawn preview"></a><br>
+      <sub><b>Rosé Pine Dawn</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/rose-pine-dawn</code></sub>
+    </td>
+    <td width="50%"></td>
+  </tr>
 </table>
 
 ## Installing a theme
