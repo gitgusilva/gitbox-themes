@@ -7,7 +7,7 @@ A clean dark Solarized theme inspired by craftzdog/solarized-osaka.nvim.
 | | |
 | --- | --- |
 | Type | Dark |
-| Author | GitBox |
+| Author | [Hermes Santos](https://github.com/HermesSantos) |
 | Version | 1.0.0 |
 
 ## Install
@@ -56,7 +56,9 @@ https://raw.githubusercontent.com/gitgusilva/gitbox-themes/main/themes/solarized
 
 ## Credits
 
-Inspired by [craftzdog/solarized-osaka.nvim](https://github.com/craftzdog/solarized-osaka.nvim). Part of the default GitBox theme set.
+Ported for GitBox by [Hermes Santos](https://github.com/HermesSantos), after
+[craftzdog/solarized-osaka.nvim](https://github.com/craftzdog/solarized-osaka.nvim)
+and Ethan Schoonover's original [Solarized](https://ethanschoonover.com/solarized/).
 
 ---
 

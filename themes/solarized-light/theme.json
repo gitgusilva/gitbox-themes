@@ -5,6 +5,7 @@
   "meta": {
     "version": "1.0.0",
     "author": "GitBox",
+    "authorUrl": "https://github.com/gitgusilva/gitbox",
     "description": "Precision colors for machines and people."
   },
   "colors": {

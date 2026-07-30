@@ -7,7 +7,7 @@ Soothing pastel theme for the high-spirited.
 | | |
 | --- | --- |
 | Type | Dark |
-| Author | GitBox |
+| Author | [Hermes Santos](https://github.com/HermesSantos) |
 | Version | 1.0.0 |
 
 ## Install
@@ -56,7 +56,8 @@ https://raw.githubusercontent.com/gitgusilva/gitbox-themes/main/themes/catppucci
 
 ## Credits
 
-Part of the default GitBox theme set.
+Ported for GitBox by [Hermes Santos](https://github.com/HermesSantos), after
+[catppuccin/catppuccin](https://github.com/catppuccin/catppuccin) (Mocha flavour).
 
 ---
 

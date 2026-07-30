@@ -7,7 +7,7 @@ Precision colors for machines and people.
 | | |
 | --- | --- |
 | Type | Dark |
-| Author | GitBox |
+| Author | [Hermes Santos](https://github.com/HermesSantos) |
 | Version | 1.0.0 |
 
 ## Install
@@ -56,7 +56,8 @@ https://raw.githubusercontent.com/gitgusilva/gitbox-themes/main/themes/solarized
 
 ## Credits
 
-Part of the default GitBox theme set.
+Ported for GitBox by [Hermes Santos](https://github.com/HermesSantos), after
+Ethan Schoonover's original [Solarized](https://ethanschoonover.com/solarized/).
 
 ---
 

@@ -42,23 +42,23 @@ to show up in the app's theme repository.
     </td>
     <td width="50%" align="center" valign="top">
       <a href="themes/solarized-osaka/README.md"><img src="themes/solarized-osaka/preview@2x.png" width="100%" alt="Solarized Osaka preview"></a><br>
-      <sub><b>Solarized Osaka</b> — GitBox<br><code>themes/solarized-osaka</code></sub>
+      <sub><b>Solarized Osaka</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/solarized-osaka</code></sub>
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
       <a href="themes/solarized-dark/README.md"><img src="themes/solarized-dark/preview@2x.png" width="100%" alt="Solarized Dark preview"></a><br>
-      <sub><b>Solarized Dark</b> — GitBox<br><code>themes/solarized-dark</code></sub>
+      <sub><b>Solarized Dark</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/solarized-dark</code></sub>
     </td>
     <td width="50%" align="center" valign="top">
       <a href="themes/gruvbox-dark/README.md"><img src="themes/gruvbox-dark/preview@2x.png" width="100%" alt="Gruvbox Dark preview"></a><br>
-      <sub><b>Gruvbox Dark</b> — GitBox<br><code>themes/gruvbox-dark</code></sub>
+      <sub><b>Gruvbox Dark</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/gruvbox-dark</code></sub>
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
       <a href="themes/catppuccin-mocha/README.md"><img src="themes/catppuccin-mocha/preview@2x.png" width="100%" alt="Catppuccin Mocha preview"></a><br>
-      <sub><b>Catppuccin Mocha</b> — GitBox<br><code>themes/catppuccin-mocha</code></sub>
+      <sub><b>Catppuccin Mocha</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/catppuccin-mocha</code></sub>
     </td>
     <td width="50%"></td>
   </tr>

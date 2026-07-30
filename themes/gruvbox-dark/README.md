@@ -7,7 +7,7 @@ Retro groove color scheme with warm earthy tones.
 | | |
 | --- | --- |
 | Type | Dark |
-| Author | GitBox |
+| Author | [Hermes Santos](https://github.com/HermesSantos) |
 | Version | 1.0.0 |
 
 ## Install
@@ -56,7 +56,8 @@ https://raw.githubusercontent.com/gitgusilva/gitbox-themes/main/themes/gruvbox-d
 
 ## Credits
 
-Part of the default GitBox theme set.
+Ported for GitBox by [Hermes Santos](https://github.com/HermesSantos), after
+[morhetz/gruvbox](https://github.com/morhetz/gruvbox).
 
 ---
 
