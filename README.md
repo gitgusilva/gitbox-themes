@@ -60,10 +60,7 @@ to show up in the app's theme repository.
       <a href="themes/catppuccin-mocha/README.md"><img src="themes/catppuccin-mocha/preview@2x.png" width="100%" alt="Catppuccin Mocha preview"></a><br>
       <sub><b>Catppuccin Mocha</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/catppuccin-mocha</code></sub>
     </td>
-    <td width="50%" align="center" valign="top">
-      <a href="themes/rose-pine/README.md"><img src="themes/rose-pine/preview@2x.png" width="100%" alt="Rosé Pine preview"></a><br>
-      <sub><b>Rosé Pine</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/rose-pine</code></sub>
-    </td>
+    <td width="50%"></td>
   </tr>
 </table>
 
@@ -79,6 +76,13 @@ to show up in the app's theme repository.
       <a href="themes/solarized-light/README.md"><img src="themes/solarized-light/preview@2x.png" width="100%" alt="Solarized Light preview"></a><br>
       <sub><b>Solarized Light</b> — GitBox<br><code>themes/solarized-light</code></sub>
     </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="themes/rose-pine-dawn/README.md"><img src="themes/rose-pine-dawn/preview@2x.png" width="100%" alt="Rosé Pine Dawn preview"></a><br>
+      <sub><b>Rosé Pine Dawn</b> — <a href="https://github.com/HermesSantos">Hermes Santos</a><br><code>themes/rose-pine-dawn</code></sub>
+    </td>
+    <td width="50%"></td>
   </tr>
 </table>
 

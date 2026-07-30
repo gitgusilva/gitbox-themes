@@ -1,0 +1,46 @@
+{
+  "id": "rose-pine-dawn",
+  "name": "Rosé Pine Dawn",
+  "type": "light",
+  "meta": {
+    "version": "1.0.0",
+    "author": "Hermes Santos",
+    "authorUrl": "https://github.com/HermesSantos",
+    "description": "All natural pine, faux fur and a bit of 70s flair."
+  },
+  "colors": {
+    "bg": "#FAF4ED",
+    "bgElevated": "#FFFAF3",
+    "bgOverlay": "#F2E9E1",
+    "surfaceHover": "#DFDAD9",
+    "border": "#F2E9E1",
+    "borderStrong": "#CECACD",
+    "textStrong": "#464261",
+    "text": "#797593",
+    "textMuted": "#9893A5",
+    "accent": "#907AA9",
+    "accentHover": "#D7827E",
+    "accentFg": "#FAF4ED",
+    "added": "#56949F",
+    "removed": "#B4637A",
+    "modified": "#286983",
+    "graph1": "#286983",
+    "graph2": "#56949F",
+    "graph3": "#6D8F89",
+    "graph4": "#EA9D34",
+    "graph5": "#D7827E",
+    "graph6": "#B4637A",
+    "graph7": "#907AA9",
+    "graph8": "#797593",
+    "graphMarker": "#FAF4ED"
+  },
+  "typography": {
+    "uiFont": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif",
+    "uiFontSize": 13,
+    "monoFont": "'IBM Plex Mono', 'SF Mono', Consolas, monospace",
+    "editorFont": "'IBM Plex Mono', 'SF Mono', Consolas, 'Courier New', monospace",
+    "editorFontSize": 13,
+    "editorLineHeight": 0,
+    "radius": 6
+  }
+}
