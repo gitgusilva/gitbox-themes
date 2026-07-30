@@ -55,6 +55,13 @@ to show up in the app's theme repository.
       <sub><b>Gruvbox Dark</b> — GitBox<br><code>themes/gruvbox-dark</code></sub>
     </td>
   </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="themes/catppuccin-mocha/README.md"><img src="themes/catppuccin-mocha/preview@2x.png" width="100%" alt="Catppuccin Mocha preview"></a><br>
+      <sub><b>Catppuccin Mocha</b> — GitBox<br><code>themes/catppuccin-mocha</code></sub>
+    </td>
+    <td width="50%"></td>
+  </tr>
 </table>
 
 ### Light
