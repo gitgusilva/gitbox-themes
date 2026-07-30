@@ -45,6 +45,13 @@ to show up in the app's theme repository.
       <sub><b>Solarized Osaka</b> — GitBox<br><code>themes/solarized-osaka</code></sub>
     </td>
   </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="themes/solarized-dark/README.md"><img src="themes/solarized-dark/preview@2x.png" width="100%" alt="Solarized Dark preview"></a><br>
+      <sub><b>Solarized Dark</b> — GitBox<br><code>themes/solarized-dark</code></sub>
+    </td>
+    <td width="50%"></td>
+  </tr>
 </table>
 
 ### Light
